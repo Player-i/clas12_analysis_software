@@ -141,7 +141,8 @@ public static void main(String[] args) {
 		        		if (current_p1 == current_p2 && p1_int == p2_int) {continue; }
 
 		        		// supply runnum and boolean for radiative simulation or not
-			        	BeamEnergy Eb = new BeamEnergy(runnum, false);
+						// It is true for radioactive corrections
+			        	BeamEnergy Eb = new BeamEnergy(runnum, true);
 			            Dihadrons variables = new Dihadrons(event, research_Event, 
 							p1_int, current_p1, p2_int, current_p2, Eb.Eb());
 			            // this is my class for defining all relevant kinematic variables
